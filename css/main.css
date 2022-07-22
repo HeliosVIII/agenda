@@ -1,0 +1,178 @@
+/*ANIMATIONS*/
+
+@keyframes aniSun {
+    from    {
+        transform: scale(1);
+        background:#ffd70000;
+        border-radius: 50%;
+    }
+    to {
+        transform: scale(1.2);
+        background: #ffd700ff;
+        border-radius: 50%;
+    }
+}
+
+/*GENERAL*/
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url("../img/background_berlin.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 60rem;
+}
+
+h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+img {
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+/*HEADER*/
+
+.header {
+    position: sticky;
+    top: 0;
+    background: transparent;
+
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+}
+
+.button{
+    filter: invert(100%);
+    background-color: transparent;
+}
+
+.info   {
+    margin: 0 2rem;
+    display: flex;
+    max-width: 80rem;
+    justify-content: space-between;
+    text-align: center;
+}
+.icon {
+    animation-name: aniSun;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+ .welcome{
+     font-size: 1.8rem;
+     margin: 0 2rem;
+ }
+/*MAIN*/
+main{
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+    height: 50vh;
+}
+main::-webkit-scrollbar {
+    display: none;
+}
+.agenda {
+    padding: 0 2rem 0rem 2rem;
+    overflow: hidden;
+}
+
+.agenda__schedule {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.agenda__hour {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.agenda__text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    justify-content: center;
+    text-align: left;
+}
+.txt--l {
+    font-size: 1.4rem;
+    margin-top: .1rem;
+    margin-bottom: .2rem;
+}
+
+.txt--s{
+    font-size: 1.2rem;
+}
+
+.container__separator {
+    width: 100%;
+    height: 1px;
+    background: #FFFFFF90;
+    border-radius: 5rem;
+    border: none;
+}
+
+/*FOOTER*/
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    position: sticky;
+    bottom: 1rem;
+    padding: 0;
+}
+.footer__actions {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #acacab;
+}
+
+.footer__actions-1 {
+    background: rgba(0, 128, 0, 0.96);
+}
+
+.footer__actions-2 {
+    background: rgba(255, 0, 0, 0.96);
+}
+
+.footer__actions-3 {
+    background: rgba(128, 0, 128, 0.96);
+}
+
+.footer__actions img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/*Responsive mobile*/
+@media screen and(max-width: 600px) {
+    .agenda__hour {
+        font-size: 1.2rem;
+    }
+}
